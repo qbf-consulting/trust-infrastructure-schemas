@@ -1,6 +1,6 @@
 title: Trust Infrastructure Schemas
 description: Portable machine-readable trust contracts for authority, delegation, evidence, decisions, registries, and assurance.
-url: https://sankarshanmukhopadhyay.github.io
+url: https://qbf-consulting.github.io
 baseurl: /trust-infrastructure-schemas
 remote_theme: just-the-docs/just-the-docs@v0.10.1
 markdown: kramdown
@@ -10,7 +10,7 @@ heading_anchors: true
 color_scheme: light
 aux_links:
   "View on GitHub":
-    - "https://github.com/sankarshanmukhopadhyay/trust-infrastructure-schemas"
+    - "https://github.com/qbf-consulting/trust-infrastructure-schemas"
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
@@ -36,19 +36,18 @@ exclude:
   - .github/
   - Gemfile
   - Gemfile.lock
-  # Repository/source Markdown is not part of the GitHub Pages publication surface.
-  # Canonical Pages content is root index.md plus docs/**/*.md. Keeping these
-  # source files out of _site prevents raw/unskinned Markdown endpoints.
   - CHANGELOG.md
   - CODE_OF_CONDUCT.md
   - CONTRIBUTING.md
   - GOVERNANCE.md
+  - NOTICE.md
   - README.md
   - RELEASE_NOTES_v0.11.0.md
   - RELEASE_NOTES_v0.12.0.md
   - ROADMAP.md
   - SECURITY.md
   - SUPPORT.md
+  - STEWARDSHIP.md
   - assurance/assurance-levels.md
   - conformance/IMPLEMENTER-DECLARATION.md
   - controls/controls.md

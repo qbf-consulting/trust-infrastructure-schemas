@@ -1,7 +1,14 @@
 cff-version: 1.2.0
 title: "Trust Infrastructure Schemas"
-message: "Please cite this repository by title, version, and repository URL."
+message: "Please cite the TIS version used and retain upstream provenance described by this repository."
 type: software
-version: "0.11.0"
-license: CC-BY-SA-4.0
-repository-code: "https://github.com/sankarshanmukhopadhyay/trust-infrastructure-schemas"
+version: "0.15.0"
+authors:
+  - family-names: Mukhopadhyay
+    given-names: Sankarshan
+    email: sankarshan@qbfconsulting.digital
+    affiliation: QBF Consulting LLP
+license: MIT
+repository-code: "https://github.com/qbf-consulting/trust-infrastructure-schemas"
+url: "https://qbf-consulting.github.io/trust-infrastructure-schemas/"
+abstract: "Portable machine-readable trust contracts for authority, delegation, evidence, decisions, registries, conformance and assurance. This repository is a QBF-stewarded fork with upstream Archetech provenance retained in the repository history and MIT license."
