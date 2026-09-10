@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Stewardship and provenance
-parent: Documentation
-nav_order: 2
+parent: Governance & Lifecycle
+grand_parent: Documentation
+nav_order: 7
 ---
 
 # Stewardship and provenance
@@ -17,4 +18,4 @@ TIS is authoritative for its portable machine-readable contracts, project-local 
 
 Historical schema identifiers and immutable evidence are not silently rewritten merely because repository stewardship or publication location changes. Any identifier migration requires an explicit compatibility and versioning decision.
 
-Use [`CITATION.cff`](../CITATION.cff) for citation of the current maintained project and [`STEWARDSHIP.md`](../STEWARDSHIP.md) for the repository-level provenance statement.
+Use [`CITATION.cff`]({% link CITATION.cff %}) for citation of the current maintained project and [`STEWARDSHIP.md`]({% link STEWARDSHIP.md %}) for the repository-level provenance statement.
