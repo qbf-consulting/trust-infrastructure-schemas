@@ -10,7 +10,7 @@
 
 **Current release:** `v0.15.0`  
 **Release theme:** Portable assurance lifecycle evidence under change  
-**Last reviewed:** 2026-08-30
+**Last reviewed:** 2026-09-10
 
 This repository publishes canonical **machine-readable trust artifacts** for operational digital trust infrastructure. It is an implementation-oriented **Open Trust Artifact Model** for expressing authority, evidence, assurance, conformance, registry state, policy references, runtime workflow state, and bounded trust decisions in forms that can be validated by machines and reviewed by humans.
 
@@ -35,7 +35,15 @@ TIS is the **portable machine-readable contract layer** between TSMM canonical s
 - [TSMS portable contract guide](docs/tsms.md)
 - Machine-readable compatibility declaration: `model/tsms-compatibility.json`
 - Validation: `npm run tsms:check`
-- Governing workstream: [#7](https://github.com/sankarshanmukhopadhyay/trust-infrastructure-schemas/issues/7)
+- Governing workstream: [#7](https://github.com/qbf-consulting/trust-infrastructure-schemas/issues/7)
+
+## TRQP Stack relationship
+
+**TRQP Stack 2026.3 — Banyan** pins TIS `0.15.0` at exact commit `edda0e87ced40797d22e3df542099871c57fcb59` as the Stack's portable contract/schema authority. This is an external coordinated-release pin, not a TIS release event and not a transfer of assurance-composition authority into this repository.
+
+TIS remains independently versioned. Stack 2026.3 reuses the existing `0.15.0` lifecycle/evidence contracts because they remain sufficient for the profile-aware compositional assurance capability; no synchronization-only TIS release is required.
+
+The TRQP Assurance Hub owns the coordinated Stack release declaration, while CTS and TSPP own their executable conformance and posture evidence respectively. TIS owns the portable contracts those components consume and validate.
 
 ## What changed in v0.15.0
 
