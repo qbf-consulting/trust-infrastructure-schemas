@@ -7,6 +7,10 @@
 > **Authority:** [`governance/repository-authority.yaml`](governance/repository-authority.yaml)  
 > **Start here:** [`docs/adoption.md`](docs/adoption.md)
 
+**Maintainer:** Sankarshan Mukhopadhyay, QBF Consulting LLP — `sankarshan@qbfconsulting.digital`  
+**Project stewardship:** QBF Consulting LLP  
+**Canonical repository:** https://github.com/qbf-consulting/trust-infrastructure-schemas  
+**Provenance:** QBF-stewarded GitHub fork of `archetech/schemas`; upstream copyright and MIT licensing are retained. See [`STEWARDSHIP.md`](STEWARDSHIP.md).
 
 **Current release:** `v0.15.0`  
 **Release theme:** Portable assurance lifecycle evidence under change  
@@ -134,6 +138,12 @@ npm run candidate:check
 ```
 
 The validation pipeline checks schema examples, coverage references, release documentation, authority boundaries, lifecycle invariants, semantic alignment, TSMS compatibility, and local artifact hygiene.
+
+## Citation, licensing and provenance
+
+Use [`CITATION.cff`](CITATION.cff) for citation of the current maintained project. The repository is MIT-licensed and retains its upstream Archetech copyright notice in [`LICENSE`](LICENSE). [`STEWARDSHIP.md`](STEWARDSHIP.md) explains the distinction between upstream provenance, current maintenance, and QBF Consulting LLP stewardship.
+
+Historical schema identifiers and immutable evidence are not silently rewritten solely because the repository moved to the QBF organization.
 
 ## Delegation lineage
 
