@@ -24,7 +24,7 @@ function expectedDisposition(requirements) {
 }
 
 function validateDeclaration(value) {
-  const errors = schemaErrors('schemas/conformance-profile-declaration.schema.json', value);
+  const errors = schemaErrors('conformance/external-conformance-profile-declaration.schema.json', value);
   const ids = (value.requirements || []).map(r => r.id);
   if (new Set(ids).size !== ids.length) errors.push('$.requirements: requirement ids must be unique');
   for (const r of value.requirements || []) {
@@ -36,7 +36,7 @@ function validateDeclaration(value) {
 }
 
 function validateResult(value) {
-  const errors = schemaErrors('schemas/conformance-result.schema.json', value);
+  const errors = schemaErrors('conformance/external-conformance-result.schema.json', value);
   const ids = (value.requirements || []).map(r => r.id);
   if (new Set(ids).size !== ids.length) errors.push('$.requirements: requirement ids must be unique');
   if (!errors.length) {
