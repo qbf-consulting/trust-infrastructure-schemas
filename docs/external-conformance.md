@@ -1,3 +1,9 @@
+---
+title: External Conformance Contracts
+parent: Assurance & Validation
+grand_parent: Documentation
+---
+
 # External conformance contracts
 
 TIS provides portable contracts for expressing a bounded TSMM conformance claim. These contracts serialize claims and results; they do not define canonical trust semantics and do not make TIS a certification authority.
@@ -10,7 +16,7 @@ TIS provides portable contracts for expressing a bounded TSMM conformance claim.
 ## Dispositions
 
 - `PASS` requires every required profile requirement to pass with evidence.
-- `PARTIAL` is permitted only when every required requirement passes and one or more optional requirements are unsupported or unevidenced.
+- `PARTIAL` is permitted only when every required requirement passes and one or more optional requirements are unsupported or unevidenced, while all required requirements pass.
 - `FAIL` is required when any required requirement fails or is explicitly unsupported.
 - `INDETERMINATE` is required when evidence needed to evaluate a required requirement is missing or unavailable.
 
