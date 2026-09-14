@@ -9,7 +9,7 @@ permalink: /docs/governance-lifecycle/
 
 # Governance & Lifecycle
 
-Review portfolio relationships, repository governance surfaces, documentation operations, and roadmap lifecycle.
+Review portfolio relationships, repository governance surfaces, documentation operations, stewardship, and roadmap lifecycle.
 
 ## In this section
 
@@ -18,5 +18,5 @@ Review portfolio relationships, repository governance surfaces, documentation op
 - [Portfolio Relationship Contracts]({% link docs/portfolio-relationship-contract.md %})
 - [Portfolio Relationships]({% link docs/portfolio-relationships.md %})
 - [Roadmap]({% link docs/roadmap.md %})
-
 - [Repository Scope and Admission Policy]({% link docs/repository-scope.md %})
+- [Stewardship and provenance]({% link docs/stewardship.md %})
