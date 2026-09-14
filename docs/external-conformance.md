@@ -10,8 +10,8 @@ TIS provides portable contracts for expressing a bounded TSMM conformance claim.
 
 ## Contracts
 
-- `schemas/conformance-profile-declaration.schema.json` — an adopter declares which TSMM profile it is evaluating and supplies evidence references for each requirement.
-- `schemas/conformance-result.schema.json` — a validator records the disposition of the declared requirements.
+- `conformance/external-conformance-profile-declaration.schema.json` — an adopter declares which TSMM profile it is evaluating and supplies evidence references for each requirement.
+- `conformance/external-conformance-result.schema.json` — a validator records the disposition of the declared requirements.
 
 ## Dispositions
 
