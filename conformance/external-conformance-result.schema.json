@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/sankarshanmukhopadhyay/trust-infrastructure-schemas/main/conformance/external-conformance-result.schema.json",
+  "title": "TSMS External Conformance Result",
+  "description": "Portable result contract for evaluating a declared external TSMM semantic conformance profile while retaining requirement-level evidence, fail-safe dispositions, and the boundary between schema validation and semantic authority.",
+  "type": "object",
+  "required": ["profile_id", "profile_version", "implementation", "disposition", "requirements", "evidence_status"],
+  "additionalProperties": false,
+  "properties": {
+    "profile_id": {"type": "string", "minLength": 1},
+    "profile_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "implementation": {"type": "string", "minLength": 1},
+    "disposition": {"type": "string", "enum": ["PASS", "PARTIAL", "FAIL", "INDETERMINATE"]},
+    "evidence_status": {"type": "string", "enum": ["complete", "partial", "missing", "unavailable"]},
+    "requirements": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "required", "status", "evidence"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^TSMM-CONF-[A-Z0-9-]+$"},
+          "required": {"type": "boolean"},
+          "status": {"type": "string", "enum": ["PASS", "FAIL", "INDETERMINATE", "UNSUPPORTED"]},
+          "evidence": {"type": "array", "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    }
+  }
+}

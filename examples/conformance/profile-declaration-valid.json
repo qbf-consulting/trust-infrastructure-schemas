@@ -1,0 +1,16 @@
+{
+  "profile_id": "tsmm-external-conformance-core-2026.1",
+  "profile_version": "1.0.0",
+  "implementation": {
+    "name": "example-external-adopter",
+    "version": "0.1.0",
+    "repository": "https://github.com/example/external-adopter"
+  },
+  "requirements": [
+    {"id": "TSMM-CONF-AUTHORITY", "support": "supported", "evidence": ["docs/authority.md"]},
+    {"id": "TSMM-CONF-DELEGATION", "support": "supported", "evidence": ["tests/delegation.json"]},
+    {"id": "TSMM-CONF-SCOPE", "support": "supported", "evidence": ["tests/scope.json"]},
+    {"id": "TSMM-CONF-CURRENT-STATE", "support": "supported", "evidence": ["tests/current-state.json"]},
+    {"id": "TSMM-CONF-EVIDENCE", "support": "supported", "evidence": ["artifacts/conformance.json"]}
+  ]
+}

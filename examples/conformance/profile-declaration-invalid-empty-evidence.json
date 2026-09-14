@@ -1,0 +1,12 @@
+{
+  "profile_id": "tsmm-external-conformance-core-2026.1",
+  "profile_version": "1.0.0",
+  "implementation": {
+    "name": "example-external-adopter",
+    "version": "0.1.0",
+    "repository": "https://github.com/example/external-adopter"
+  },
+  "requirements": [
+    {"id": "TSMM-CONF-AUTHORITY", "support": "supported", "evidence": []}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "profile": "tsmm-external-conformance-core-2026.1",
+  "fixtures": [
+    {"path": "examples/conformance/profile-declaration-valid.json", "kind": "declaration", "valid": true},
+    {"path": "examples/conformance/profile-declaration-invalid-empty-evidence.json", "kind": "declaration", "valid": false},
+    {"path": "examples/conformance/result-pass.json", "kind": "result", "valid": true},
+    {"path": "examples/conformance/result-indeterminate.json", "kind": "result", "valid": true},
+    {"path": "examples/conformance/result-fail-required-unsupported.json", "kind": "result", "valid": true}
+  ]
+}
