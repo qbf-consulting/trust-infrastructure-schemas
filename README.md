@@ -91,6 +91,7 @@ TSPP materiality judgment -> TIS lifecycle contract -> CTS reassessment conseque
 - Agent credential schemas: `credentials/agent/v1/README.md`
 - Reputation credential schemas: `credentials/reputation/v1/README.md`
 - Authority boundary schema: `governance/authority-boundary.schema.json`
+- Authority-at-commitment contract: `governance/authority-at-commitment.schema.json` — exact-action authority, approval binding and replayable decision evidence
 
 ### Runtime profiles
 
