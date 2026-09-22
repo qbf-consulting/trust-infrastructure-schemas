@@ -1,0 +1,60 @@
+{
+  "contract_version": "1.0",
+  "exercise_id": "exercise:42",
+  "principal": {
+    "id": "org:buyer.example",
+    "type": "organization"
+  },
+  "actor": {
+    "id": "agentreg:buyer.example:sourcing-1",
+    "type": "agent"
+  },
+  "mandate": {
+    "ref": "urn:mandate:42",
+    "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "action": {
+    "id": "urn:action:42",
+    "digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "type": "procurement.commit",
+    "target": "opportunity:42",
+    "amount": 90000,
+    "currency": "USD"
+  },
+  "evaluation": {
+    "evaluated_at": "2026-09-22T12:00:00Z"
+  },
+  "policy": {
+    "id": "urn:policy:procurement",
+    "version": "3"
+  },
+  "authority_state": "active",
+  "constraints": [
+    {
+      "id": "scope",
+      "result": "satisfied"
+    },
+    {
+      "id": "amount_limit",
+      "result": "satisfied"
+    }
+  ],
+  "approval": {
+    "required": false,
+    "present": false
+  },
+  "decision": {
+    "outcome": "permit",
+    "reason_codes": [
+      "AUTHORITY_CURRENT",
+      "SCOPE_SATISFIED"
+    ]
+  },
+  "evidence": [
+    {
+      "ref": "urn:evidence:status:42",
+      "kind": "status",
+      "observed_at": "2026-09-22T11:59:50Z"
+    }
+  ]
+}
