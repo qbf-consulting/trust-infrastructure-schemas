@@ -1,0 +1,40 @@
+{
+  "event_id": "event:collective-authority:membership-change:1",
+  "event_type": "change_detected",
+  "observed_at": "2026-09-22T12:30:00Z",
+  "target": {
+    "id": "org:buyer.example",
+    "type": "collective-authority-state",
+    "version": "membership-v2"
+  },
+  "previous_state_refs": [
+    "urn:evidence:membership:v1",
+    "urn:evidence:threshold:v1"
+  ],
+  "current_state_refs": [
+    "urn:evidence:membership:v2",
+    "urn:evidence:threshold:v1"
+  ],
+  "changed_dimensions": [
+    "authority"
+  ],
+  "impact": "material",
+  "affected_refs": [
+    "urn:authority-exercise:evidence:prior"
+  ],
+  "disposition": "reassessment_required",
+  "reassessment_scope": [
+    "current collective membership",
+    "threshold satisfaction",
+    "exact-action approval binding"
+  ],
+  "authority": {
+    "actor": "policy:collective-authority-governance",
+    "scope": "classify authority membership change"
+  },
+  "rationale": "A controller membership change alters the authority evidence supporting future collective exercises and requires reassessment.",
+  "provenance": {
+    "producer": "tis-pressure-test",
+    "source_commit": "working-tree"
+  }
+}
