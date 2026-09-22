@@ -15,11 +15,12 @@
     "external-conformance:check": "node tools/validate-external-conformance.js",
     "mermaid:check": "python scripts/validate_mermaid.py",
     "candidate:evidence": "python scripts/write_candidate_evidence.py",
-    "candidate:check": "npm run validate:all && npm run governance:check && npm run relationships:check && npm run semantic:check && npm run tsms:check && npm run assurance-lifecycle:check && npm run external-conformance:check && npm run version:check && npm run docs:check && npm run pages:check && npm run mermaid:check && npm run candidate:evidence",
+    "candidate:check": "npm run validate:all && npm run governance:check && npm run relationships:check && npm run semantic:check && npm run tsms:check && npm run assurance-lifecycle:check && npm run composite-authority:check && npm run external-conformance:check && npm run version:check && npm run docs:check && npm run pages:check && npm run mermaid:check && npm run candidate:evidence",
     "semantic:check": "node tools/validate-tsmm-semantic-alignment.js",
     "version:check": "node tools/check-version-consistency.js",
     "pages:check": "node tools/validate-pages-ia.js",
-    "tsms:check": "node tools/validate-tsms-compatibility.js"
+    "tsms:check": "node tools/validate-tsms-compatibility.js",
+    "composite-authority:check": "node tools/validate-composite-authority.js"
   },
   "devDependencies": {}
 }
