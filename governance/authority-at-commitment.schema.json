@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://qbfconsulting.digital/schemas/authority-at-commitment/v1",
+  "$id": "https://raw.githubusercontent.com/sankarshanmukhopadhyay/trust-infrastructure-schemas/v0.9.0/governance/authority-at-commitment.schema.json",
   "title": "Authority at Commitment Contract",
   "description": "Portable contract for recording the authority evidence, exact action binding, approval state and decision at a material commitment boundary.",
   "type": "object",
