@@ -1,3 +1,8 @@
+---
+title: Authority at Commitment Contract
+parent: Integration & Adoption
+grand_parent: Documentation
+---
 # Authority at Commitment Contract
 
 ## Purpose
