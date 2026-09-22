@@ -74,6 +74,16 @@ try {
   validate("registry/registry-entry.schema.json", "examples/composition/registry-entry.example.json", "composition registry entry");
   validate("common/artifact-reference.schema.json", "common/examples/artifact-reference.example.json", "reusable artifact reference example");
   validate("governance/authority-boundary.schema.json", "governance/examples/authority-boundary.example.json", "authority boundary example");
+  validate("governance/authority-at-commitment.schema.json", "examples/authority-at-commitment.valid.json", "authority at commitment valid example");
+  {
+    const schemaObj = loadJson("governance/authority-at-commitment.schema.json");
+    const invalid = loadJson("examples/authority-at-commitment.invalid-permit-revoked.json");
+    const negativeErrors = validateJsonSchema(schemaObj, schemaObj, invalid);
+    if (!negativeErrors.length) {
+      throw new Error("authority-at-commitment negative fixture unexpectedly validated");
+    }
+    console.log("== Validating authority at commitment negative fixture ==\nOK: rejected as expected");
+  }
   validate("evidence/evidence-bundle-manifest.schema.json", "examples/composition/evidence-bundle-manifest.example.json", "evidence bundle manifest example");
   validate("oasf/oasf-publication-profile.schema.json", "oasf/examples/oasf-publication-profile.example.json", "OASF publication profile example");
   validate("oasf/oasf-evaluation-envelope.schema.json", "oasf/examples/oasf-evaluation-envelope.example.json", "OASF evaluation envelope example");
