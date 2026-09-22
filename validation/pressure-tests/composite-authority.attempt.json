@@ -1,0 +1,72 @@
+{
+  "contract_version": "1.0",
+  "exercise_id": "exercise.collective.001",
+  "principal": {
+    "id": "org:buyer.example",
+    "type": "collective-principal"
+  },
+  "actor": {
+    "id": "controller:a",
+    "type": "controller"
+  },
+  "mandate": {
+    "ref": "urn:mandate:collective:1",
+    "digest": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "action": {
+    "id": "purchase:42",
+    "digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "type": "procurement.commit"
+  },
+  "evaluation": {
+    "evaluated_at": "2026-09-22T12:00:00Z"
+  },
+  "policy": {
+    "id": "policy:collective-authority",
+    "version": "1"
+  },
+  "authority_state": "active",
+  "constraints": [
+    {
+      "id": "scope",
+      "result": "satisfied"
+    }
+  ],
+  "approval": {
+    "required": false,
+    "present": false
+  },
+  "decision": {
+    "outcome": "permit",
+    "reason_codes": [
+      "CURRENT_COLLECTIVE_AUTHORITY"
+    ]
+  },
+  "evidence": [
+    {
+      "ref": "urn:evidence:authority:1",
+      "kind": "authority"
+    }
+  ],
+  "collective_authority": {
+    "principal_id": "org:buyer.example",
+    "threshold_required": 2,
+    "current_members": [
+      "controller:a",
+      "controller:b",
+      "controller:c"
+    ],
+    "membership_evidence_ref": "urn:evidence:membership:v2",
+    "rule_evidence_ref": "urn:evidence:threshold:v1",
+    "approvals": [
+      {
+        "member": "controller:a",
+        "action_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      {
+        "member": "controller:b",
+        "action_digest": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      }
+    ]
+  }
+}
