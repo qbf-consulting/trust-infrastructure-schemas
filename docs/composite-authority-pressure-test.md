@@ -1,3 +1,10 @@
+---
+title: Composite Authority Contract Pressure Test
+parent: Integration & Adoption
+grand_parent: Documentation
+nav_order: 16
+---
+
 # Composite Authority Contract Pressure Test
 
 ## Result
