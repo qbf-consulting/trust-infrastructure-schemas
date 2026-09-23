@@ -3,6 +3,9 @@
 ## v0.15.0 - 2026-08-30
 
 ### Added
+- added portable external conformance declaration/result contracts with fail-safe handling for unknown profiles, unsupported versions, missing evidence and required failures;
+- added `governance/authority-at-commitment.schema.json` for exact-action authority decisions, scope, lifecycle state, approvals and deterministic action binding;
+- added composite-authority lifecycle/invalidation validation and negative fixtures separating collective principals from participating controllers and historical verification from current authorization;
 - added `assurance/assurance-lifecycle-event.schema.json` as the portable Stack contract for change detection, reassessment, invalidation, supersession, provenance, authority, and bounded reassessment scope;
 - added machine-verifiable material, non-material, and unknown-impact handling with fail-safe lifecycle dispositions;
 - added lifecycle validation and negative probes preventing material or unknown impact from silently preserving current assurance.
@@ -13,6 +16,8 @@
 - demonstrated Assurance Hub recomposition of current assurance validity without rewriting historical outcomes or stealing upstream semantic authority.
 
 ### Governance
+- preserved the distinction between identity/signature and current action-specific authority;
+- preserved fail-safe behavior when authority evidence is missing, stale or indeterminate;
 - preserved TSMM canonical semantic authority and explicit `authorityTransfer: false` bindings;
 - promoted the lifecycle event into the TSMS golden-path contract set only after cross-repository consumption succeeded;
 - recorded that v0.15.0 is additive and evidence-driven rather than a synchronization-only release.

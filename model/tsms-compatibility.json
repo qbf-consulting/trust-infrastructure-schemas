@@ -1,15 +1,15 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "contractId": "urn:tsms:tis:compatibility",
-  "repository": "sankarshanmukhopadhyay/trust-infrastructure-schemas",
+  "repository": "qbf-consulting/trust-infrastructure-schemas",
   "repositoryVersion": "v0.15.0",
   "role": "portable-machine-readable-contract-layer",
   "tsms": {
-    "stackManifest": "https://github.com/sankarshanmukhopadhyay/trust-systems-meta-model/blob/main/model/tsms-stack.json",
-    "coordinationIssue": "https://github.com/sankarshanmukhopadhyay/trust-systems-meta-model/issues/5",
-    "baselineStatus": "candidate",
+    "stackManifest": "https://github.com/qbf-consulting/trust-systems-meta-model/blob/main/model/tsms-stack.json",
+    "coordinationIssue": "https://github.com/qbf-consulting/trust-systems-meta-model/issues/52",
+    "baselineStatus": "accepted-2026.1-plus-newer-local-component-state",
     "semanticAuthority": {
-      "repository": "sankarshanmukhopadhyay/trust-systems-meta-model",
+      "repository": "qbf-consulting/trust-systems-meta-model",
       "version": "v0.24.0"
     },
     "downstreamConsumer": {
@@ -35,7 +35,9 @@
     "knownBaseline": "compatible-candidate",
     "unknownVersion": "unsupported",
     "semanticAuthorityTransfer": false,
-    "silentCompatibilityForUnknownVersions": false
+    "silentCompatibilityForUnknownVersions": false,
+    "acceptedStackBaseline": "tsms-stack-2026.1",
+    "localNewerStateRequiresRenewal": true
   },
   "goldenPathContracts": [
     "governance/authority-boundary.schema.json",
