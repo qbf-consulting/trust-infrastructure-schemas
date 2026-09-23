@@ -34,7 +34,7 @@ Trust infrastructure fails when governance remains trapped in websites, PDFs, an
 
 ## TIS in the Trust Systems Modelling Stack (TSMS)
 
-TIS is the **portable machine-readable contract layer** between TSMM canonical semantics and TGA executable governance artifacts. The current candidate baseline is **TSMM v0.24.0 / TIS v0.15.0 / TGA v0.12.1**. Unknown versions are not silently treated as compatible.
+TIS is the **portable machine-readable contract layer** between TSMM canonical semantics and TGA executable governance artifacts. The accepted TSMS stack baseline remains **tsms-stack-2026.1** at its exact pinned commits. TIS v0.15.0 is a newer independently versioned component state and is a candidate input to the separately governed TSMS 2026.2 renewal; it does not inherit stack compatibility merely because local validation is green. Unknown versions are never silently treated as compatible.
 
 - [TSMS portable contract guide](docs/tsms.md)
 - Machine-readable compatibility declaration: `model/tsms-compatibility.json`
@@ -55,6 +55,9 @@ The TRQP Assurance Hub owns the coordinated Stack release declaration, while CTS
 
 Major changes:
 
+- adds portable external conformance declaration/result contracts with fail-safe non-success dispositions;
+- adds `governance/authority-at-commitment.schema.json` for exact-action authority decisions, approval binding, lifecycle checks, and deterministic action binding;
+- adds composite-authority lifecycle validation so stale membership, threshold, or exercise-rule evidence cannot remain current after material change;
 - adds `assurance/assurance-lifecycle-event.schema.json` for change detection, reassessment, invalidation, supersession, provenance, and authority-boundary evidence;
 - represents material, non-material, and unknown impact without allowing unknown impact to collapse silently to current/reusable assurance;
 - preserves TSMM semantic authority and component-local judgment ownership through explicit `authorityTransfer: false` bindings;
