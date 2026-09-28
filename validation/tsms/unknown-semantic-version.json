@@ -1,7 +1,7 @@
 {
   "semanticAuthorityRepository": "qbf-consulting/trust-systems-meta-model",
   "semanticAuthorityVersion": "v999.0.0",
-  "tisVersion": "v0.14.1",
-  "tgaVersion": "v0.12.1",
+  "tisVersion": "v0.16.0",
+  "tgaVersion": "v0.13.0",
   "expectedDisposition": "unsupported"
 }
