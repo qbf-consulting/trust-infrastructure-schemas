@@ -61,6 +61,12 @@ Major changes:
 - preserves TSMM semantic authority through `authorityTransfer: false`;
 - retains upstream research provenance without creating an upstream dependency;
 
+- adds `decision/decision-resolution-evidence.schema.json` for causal decision-transition and unresolved-condition evidence;
+- proves that evidence-based resolution does not imply an authority change;
+- rejects peer pressure, repetition, reputation, and workflow progression as resolution categories;
+- preserves TSMM semantic authority through `authorityTransfer: false`;
+- retains upstream research provenance without creating an upstream dependency;
+
 - adds portable external conformance declaration/result contracts with fail-safe non-success dispositions;
 - adds `governance/authority-at-commitment.schema.json` for exact-action authority decisions, approval binding, lifecycle checks, and deterministic action binding;
 - adds composite-authority lifecycle validation so stale membership, threshold, or exercise-rule evidence cannot remain current after material change;
@@ -120,6 +126,7 @@ TSPP materiality judgment -> TIS lifecycle contract -> CTS reassessment conseque
 - Evidence bundle integrity profile: `docs/evidence-bundle-integrity-profile.md`
 - Status and revocation evidence: `docs/status-and-revocation-evidence.md`
 - Decision receipt schema: `decision/decision-receipt.schema.json`
+- Decision resolution evidence: `decision/decision-resolution-evidence.schema.json`
 - Decision resolution evidence: `decision/decision-resolution-evidence.schema.json`
 
 ### Registry and ecosystem-state artifacts
