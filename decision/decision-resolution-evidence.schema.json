@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://qbfconsulting.digital/trust-infrastructure-schemas/decision/decision-resolution-evidence.schema.json",
+  "$id": "https://raw.githubusercontent.com/sankarshanmukhopadhyay/trust-infrastructure-schemas/main/decision/decision-resolution-evidence.schema.json",
   "title": "Decision Resolution Evidence",
   "description": "Portable evidence describing why a material trust decision or unresolved condition changed state without conflating evidence, policy, lifecycle, or correction with authority.",
   "type": "object",
