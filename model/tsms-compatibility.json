@@ -2,19 +2,19 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "contractId": "urn:tsms:tis:compatibility",
   "repository": "qbf-consulting/trust-infrastructure-schemas",
-  "repositoryVersion": "v0.15.0",
+  "repositoryVersion": "v0.16.0",
   "role": "portable-machine-readable-contract-layer",
   "tsms": {
     "stackManifest": "https://github.com/qbf-consulting/trust-systems-meta-model/blob/main/model/tsms-stack.json",
     "coordinationIssue": "https://github.com/qbf-consulting/trust-systems-meta-model/issues/52",
-    "baselineStatus": "accepted-2026.1-plus-newer-local-component-state",
+    "baselineStatus": "accepted-2026.2-plus-newer-local-component-state",
     "semanticAuthority": {
       "repository": "qbf-consulting/trust-systems-meta-model",
-      "version": "v0.24.0"
+      "version": "v0.26.0"
     },
     "downstreamConsumer": {
       "repository": "sankarshanmukhopadhyay/trust-graph-artifacts",
-      "version": "v0.12.1"
+      "version": "v0.13.0"
     }
   },
   "authority": {
@@ -36,13 +36,14 @@
     "unknownVersion": "unsupported",
     "semanticAuthorityTransfer": false,
     "silentCompatibilityForUnknownVersions": false,
-    "acceptedStackBaseline": "tsms-stack-2026.1",
+    "acceptedStackBaseline": "tsms-stack-2026.2",
     "localNewerStateRequiresRenewal": true
   },
   "goldenPathContracts": [
     "governance/authority-boundary.schema.json",
     "evidence/evidence-bundle-manifest.schema.json",
     "decision/decision-receipt.schema.json",
-    "assurance/assurance-lifecycle-event.schema.json"
+    "assurance/assurance-lifecycle-event.schema.json",
+    "decision/decision-resolution-evidence.schema.json"
   ]
 }
