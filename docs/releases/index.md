@@ -13,9 +13,11 @@ Version history, release notes, compatibility posture, and migration context.
 
 ## Current release
 
-- [v0.15.0 — Portable Assurance Lifecycle Evidence]({% link docs/releases/v0.15.0.md %})
+- [v0.16.0 — Portable Decision Resolution Evidence]({% link docs/releases/v0.16.0.md %})
 
 ## Previous releases
+
+- [v0.15.0 — Portable Assurance Lifecycle Evidence]({% link docs/releases/v0.15.0.md %})
 
 - [v0.14.1 — Publication and Validation Repair]({% link docs/releases/v0.14.1.md %})
 - [v0.14.0 — DTG Drift Alignment and Pages Completeness]({% link docs/releases/v0.14.0.md %})
