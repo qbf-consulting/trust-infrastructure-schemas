@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Decision Resolution Evidence
-parent: Documentation
+parent: Artifact Contracts
+grand_parent: Documentation
 ---
 # Decision Resolution Evidence
 
