@@ -2,7 +2,7 @@
 
 > **Flagship repository**  
 > **Role:** `portable-machine-readable-contract-layer`  
-> **Current version:** `v0.15.0`  
+> **Current version:** `v0.16.0`  
 > **Canonical validation:** `make validate`  
 > **Authority:** [`governance/repository-authority.yaml`](governance/repository-authority.yaml)  
 > **Start here:** [`docs/adoption.md`](docs/adoption.md)
@@ -12,9 +12,9 @@
 **Canonical repository:** https://github.com/qbf-consulting/trust-infrastructure-schemas  
 **Provenance:** QBF-stewarded GitHub fork of `archetech/schemas`; upstream copyright and MIT licensing are retained. See [`STEWARDSHIP.md`](STEWARDSHIP.md).
 
-**Current release:** `v0.15.0`  
-**Release theme:** Portable assurance lifecycle evidence under change  
-**Last reviewed:** 2026-09-10
+**Current release:** `v0.16.0`  
+**Release theme:** Portable decision-resolution evidence  
+**Last reviewed:** 2026-09-28
 
 This repository publishes canonical **machine-readable trust artifacts** for operational digital trust infrastructure. It is an implementation-oriented **Open Trust Artifact Model** for expressing authority, evidence, assurance, conformance, registry state, policy references, runtime workflow state, and bounded trust decisions in forms that can be validated by machines and reviewed by humans.
 
@@ -49,11 +49,23 @@ TIS remains independently versioned. Stack 2026.3 reuses the existing `0.15.0` l
 
 The TRQP Assurance Hub owns the coordinated Stack release declaration, while CTS and TSPP own their executable conformance and posture evidence respectively. TIS owns the portable contracts those components consume and validate.
 
-## What changed in v0.15.0
+## What changed in v0.16.0
 
-`v0.15.0` adds the portable assurance lifecycle event contract required to carry change-impact evidence across independently authoritative Stack components.
+`v0.16.0` adds a portable decision-resolution evidence contract that preserves whether material decision changes arise from authority, evidence, policy, lifecycle, correction, or evaluation context, while keeping unresolved conditions explicit until an admissible resolution event occurs.
 
 Major changes:
+
+- adds `decision/decision-resolution-evidence.schema.json` for causal decision-transition and unresolved-condition evidence;
+- proves that evidence-based resolution does not imply an authority change;
+- rejects peer pressure, repetition, reputation, and workflow progression as resolution categories;
+- preserves TSMM semantic authority through `authorityTransfer: false`;
+- retains upstream research provenance without creating an upstream dependency;
+
+- adds `decision/decision-resolution-evidence.schema.json` for causal decision-transition and unresolved-condition evidence;
+- proves that evidence-based resolution does not imply an authority change;
+- rejects peer pressure, repetition, reputation, and workflow progression as resolution categories;
+- preserves TSMM semantic authority through `authorityTransfer: false`;
+- retains upstream research provenance without creating an upstream dependency;
 
 - adds portable external conformance declaration/result contracts with fail-safe non-success dispositions;
 - adds `governance/authority-at-commitment.schema.json` for exact-action authority decisions, approval binding, lifecycle checks, and deterministic action binding;
@@ -65,7 +77,7 @@ Major changes:
 - establishes cross-repository consumption evidence through TRQP-TSPP, trqp-conformance-suite, and trqp-assurance-hub;
 - keeps historical assurance immutable while enabling lineage-based reassessment and supersession.
 
-See [`docs/releases/v0.15.0.md`](docs/releases/v0.15.0.md).
+See [`docs/releases/v0.16.0.md`](docs/releases/v0.16.0.md).
 
 ## Canonical governance flow
 
@@ -114,6 +126,8 @@ TSPP materiality judgment -> TIS lifecycle contract -> CTS reassessment conseque
 - Evidence bundle integrity profile: `docs/evidence-bundle-integrity-profile.md`
 - Status and revocation evidence: `docs/status-and-revocation-evidence.md`
 - Decision receipt schema: `decision/decision-receipt.schema.json`
+- Decision resolution evidence: `decision/decision-resolution-evidence.schema.json`
+- Decision resolution evidence: `decision/decision-resolution-evidence.schema.json`
 
 ### Registry and ecosystem-state artifacts
 

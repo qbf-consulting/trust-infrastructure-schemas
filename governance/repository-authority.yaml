@@ -4,7 +4,7 @@ portfolio_tier: flagship
 lifecycle: active
 role: portable-machine-readable-contract-layer
 stability: provisional
-current_version: "v0.15.0"
+current_version: "v0.16.0"
 authority:
   owns:
     - portable-core-contracts

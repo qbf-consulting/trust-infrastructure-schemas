@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/sankarshanmukhopadhyay/trust-infrastructure-schemas/main/decision/decision-resolution-evidence.schema.json",
+  "title": "Decision Resolution Evidence",
+  "description": "Portable evidence describing why a material trust decision or unresolved condition changed state without conflating evidence, policy, lifecycle, or correction with authority.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_id","observed_at","condition","transition_basis","provenance"],
+  "properties": {
+    "event_id": {"type":"string","minLength":1},
+    "observed_at": {"type":"string","format":"date-time"},
+    "condition": {
+      "type":"object",
+      "additionalProperties":false,
+      "required":["condition_id","proposition","state","established_at"],
+      "properties":{
+        "condition_id":{"type":"string","minLength":1},
+        "proposition":{"type":"string","minLength":10},
+        "state":{"enum":["unresolved","resolved"]},
+        "established_at":{"type":"string","format":"date-time"},
+        "resolved_at":{"type":"string","format":"date-time"}
+      }
+    },
+    "previous_decision_ref":{"type":"string","format":"uri"},
+    "current_decision_ref":{"type":"string","format":"uri"},
+    "transition_basis":{
+      "type":"object",
+      "additionalProperties":false,
+      "required":["primary_category","changed_dimensions","authority_changed","evidence_refs"],
+      "properties":{
+        "primary_category":{"enum":["authority_change","evidence_change","policy_change","lifecycle_change","correction","evaluation_context_change","none"]},
+        "changed_dimensions":{
+          "type":"array","uniqueItems":true,
+          "items":{"enum":["authority","evidence","policy","lifecycle","proposition","evaluation_context"]}
+        },
+        "authority_changed":{"type":"boolean"},
+        "evidence_refs":{"type":"array","uniqueItems":true,"items":{"type":"string","format":"uri"}},
+        "policy_ref":{"type":"string","format":"uri"},
+        "authority_ref":{"type":"string","format":"uri"},
+        "lifecycle_ref":{"type":"string","format":"uri"},
+        "rationale":{"type":"string","minLength":10}
+      }
+    },
+    "provenance":{
+      "type":"object","additionalProperties":false,
+      "required":["producer","semantic_profile"],
+      "properties":{
+        "producer":{"type":"string","minLength":1},
+        "semantic_profile":{"const":"TSMM decision-resolution semantics"},
+        "source_event_ref":{"type":"string","format":"uri"}
+      }
+    }
+  },
+  "allOf":[
+    {
+      "if":{"properties":{"condition":{"properties":{"state":{"const":"resolved"}},"required":["state"]}}},
+      "then":{
+        "properties":{
+          "condition":{"required":["resolved_at"]},
+          "transition_basis":{"properties":{"primary_category":{"not":{"const":"none"}}}}
+        }
+      }
+    },
+    {
+      "if":{"properties":{"condition":{"properties":{"state":{"const":"unresolved"}},"required":["state"]}}},
+      "then":{"properties":{"transition_basis":{"properties":{"primary_category":{"const":"none"},"changed_dimensions":{"maxItems":0},"authority_changed":{"const":false}}}}}
+    },
+    {
+      "if":{"properties":{"transition_basis":{"properties":{"primary_category":{"const":"authority_change"}},"required":["primary_category"]}}},
+      "then":{"properties":{"transition_basis":{"properties":{"authority_changed":{"const":true}},"required":["authority_ref"]}}}
+    },
+    {
+      "if":{"properties":{"transition_basis":{"properties":{"primary_category":{"enum":["evidence_change","policy_change","lifecycle_change","correction","evaluation_context_change"]}},"required":["primary_category"]}}},
+      "then":{"properties":{"transition_basis":{"properties":{"authority_changed":{"const":false}}}}}
+    }
+  ],
+  "x-tsmm-semantic-binding":{
+    "semanticAuthority":"trust-systems-meta-model",
+    "relationship":"portable-contract",
+    "conceptIds":["urn:tsmm:concept:decision-transition-basis","urn:tsmm:concept:material-unresolved-condition","urn:tsmm:concept:trust-decision","urn:tsmm:concept:authority","urn:tsmm:concept:evidence-artifact","urn:tsmm:concept:policy"],
+    "authorityTransfer":false
+  }
+}
