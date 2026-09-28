@@ -23,13 +23,13 @@ A need discovered downstream does not permit TIS to redefine a TSMM concept. Sem
 
 ## Accepted stack baseline versus current TIS release
 
-The immutable accepted stack release remains **`tsms-stack-2026.1 — Cashew-Nut`**:
+The immutable accepted stack release is **`tsms-stack-2026.2 — Alphonso mango`**:
 
-- TSMM `v0.24.0` — commit `2867010121e8a61971184d8fe7d3306b985e5884`
-- TIS `v0.14.1` — commit `d25539932181e6d883f5bec261daaf011f740059`
-- TGA `v0.12.1` — commit `f0bdc309a691a7be8dca3b48fed8ac1555219bec`
+- TSMM `v0.25.0` — commit `a673971d7a3e10cff5ceb679738de4ce5bce6857`
+- TIS `v0.15.0` — commit `e4fbe60e6810f108b593c76ac2b970093a59a5e1`
+- TGA `v0.13.0` — commit `457fc18a4be90f439d64f96c5a4d6c8cce237404`
 
-TIS `v0.15.0` is a newer independently governed component release. It adds lifecycle, conformance, authority-at-commitment, and composite-authority contract capabilities and is an input to the separately governed TSMS 2026.2 renewal. It does **not** automatically supersede the 2026.1 accepted TIS pin.
+TIS `v0.16.0` is a newer independently governed component release. It adds portable decision-resolution evidence bound to TSMM `v0.26.0` semantics. It does **not** automatically supersede the accepted 2026.2 TIS pin; coordinated compatibility requires a separately governed TSMS renewal.
 
 Complete-stack adopters should use the canonical QBF-hosted TSMS documentation:
 
@@ -43,14 +43,15 @@ Run:
 npm run tsms:check
 ```
 
-## Portable contracts relevant to the successor stack
+## Portable contracts relevant to current and successor stack evaluation
 
-TIS v0.15.0 carries the portable surfaces now exercised across the post-2026.1 stack:
+TIS v0.16.0 carries the accepted v0.15.0 contract families plus the newer decision-resolution evidence surface used for subsequent stack evaluation:
 
 - `governance/authority-boundary.schema.json`;
 - `governance/authority-at-commitment.schema.json`;
 - `evidence/evidence-bundle-manifest.schema.json`;
 - `decision/decision-receipt.schema.json`;
+- `decision/decision-resolution-evidence.schema.json`;
 - `assurance/assurance-lifecycle-event.schema.json`;
 - external conformance declaration/result contracts.
 
@@ -60,7 +61,9 @@ The contracts preserve these invariants:
 - scope, expiry, revocation, approvals and evaluation time remain decision inputs;
 - collective-authority membership/threshold/rule freshness is representable;
 - stale collective-authority evidence can be invalidated or superseded without destroying historical verification;
-- unknown or missing required evidence cannot silently become PASS.
+- unknown or missing required evidence cannot silently become PASS;
+- a changed decision remains attributable to authority, evidence, policy, lifecycle, correction, or evaluation-context change;
+- workflow progression, peer pressure, repetition, or reputation do not silently resolve a material unresolved condition.
 
 ## Fail-safe compatibility
 
