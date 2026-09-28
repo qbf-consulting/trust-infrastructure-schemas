@@ -34,7 +34,7 @@ Trust infrastructure fails when governance remains trapped in websites, PDFs, an
 
 ## TIS in the Trust Systems Modelling Stack (TSMS)
 
-TIS is the **portable machine-readable contract layer** between TSMM canonical semantics and TGA executable governance artifacts. The accepted TSMS stack baseline remains **tsms-stack-2026.1** at its exact pinned commits. TIS v0.15.0 is a newer independently versioned component state and is a candidate input to the separately governed TSMS 2026.2 renewal; it does not inherit stack compatibility merely because local validation is green. Unknown versions are never silently treated as compatible.
+TIS is the **portable machine-readable contract layer** between TSMM canonical semantics and TGA executable governance artifacts. The accepted TSMS stack baseline is **tsms-stack-2026.2** at its exact pinned commits (TSMM v0.25.0, TIS v0.15.0, TGA v0.13.0). TIS v0.16.0 is a newer independently versioned component state that binds the newer TSMM v0.26.0 decision-resolution semantics; it does not inherit coordinated stack compatibility merely because local validation is green. Unknown versions are never silently treated as compatible.
 
 - [TSMS portable contract guide](docs/tsms.md)
 - Machine-readable compatibility declaration: `model/tsms-compatibility.json`
@@ -54,12 +54,6 @@ The TRQP Assurance Hub owns the coordinated Stack release declaration, while CTS
 `v0.16.0` adds a portable decision-resolution evidence contract that preserves whether material decision changes arise from authority, evidence, policy, lifecycle, correction, or evaluation context, while keeping unresolved conditions explicit until an admissible resolution event occurs.
 
 Major changes:
-
-- adds `decision/decision-resolution-evidence.schema.json` for causal decision-transition and unresolved-condition evidence;
-- proves that evidence-based resolution does not imply an authority change;
-- rejects peer pressure, repetition, reputation, and workflow progression as resolution categories;
-- preserves TSMM semantic authority through `authorityTransfer: false`;
-- retains upstream research provenance without creating an upstream dependency;
 
 - adds `decision/decision-resolution-evidence.schema.json` for causal decision-transition and unresolved-condition evidence;
 - proves that evidence-based resolution does not imply an authority change;
@@ -126,7 +120,6 @@ TSPP materiality judgment -> TIS lifecycle contract -> CTS reassessment conseque
 - Evidence bundle integrity profile: `docs/evidence-bundle-integrity-profile.md`
 - Status and revocation evidence: `docs/status-and-revocation-evidence.md`
 - Decision receipt schema: `decision/decision-receipt.schema.json`
-- Decision resolution evidence: `decision/decision-resolution-evidence.schema.json`
 - Decision resolution evidence: `decision/decision-resolution-evidence.schema.json`
 
 ### Registry and ecosystem-state artifacts
