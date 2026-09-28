@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.16.0 — Portable Decision Resolution Evidence
+
+- Added a TSMM-bound portable decision-resolution evidence contract.
+- Added explicit decision-transition basis categories for authority, evidence, policy, lifecycle, correction, and evaluation-context changes.
+- Added unresolved-condition representation that cannot silently resolve through workflow progression.
+- Added positive fixtures for evidence-based resolution with unchanged authority and unresolved peer pressure.
+- Added release-gated validation and retained read-only research provenance to Protocol of Care for Agents.
+
 ## v0.15.0 - 2026-08-30
 
 ### Added
