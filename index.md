@@ -11,7 +11,7 @@ permalink: /
 Trust Infrastructure Schemas (TIS) publishes portable, machine-readable contracts for authority, delegation, evidence, decisions, registries, conformance, and assurance.
 
 **Status:** Candidate specification  
-**Current release:** `v0.15.0`  
+**Current release:** `v0.16.0`  
 **Lifecycle:** Active  
 **Operational status:** Active validation
 
@@ -22,7 +22,7 @@ Trust Infrastructure Schemas (TIS) publishes portable, machine-readable contract
 - **Validate:** [Assurance & Validation]({% link docs/assurance-validation.md %}) → [Candidate Readiness]({% link docs/candidate-readiness.md %})
 - **Integrate:** [Integration & Adoption]({% link docs/integration-adoption.md %}) → [Interoperability]({% link docs/interoperability.md %})
 - **Govern:** [Governance & Lifecycle]({% link docs/governance-lifecycle.md %}) → [Portfolio Relationship Contract]({% link docs/portfolio-relationship-contract.md %})
-- **Release history:** [v0.15.0 release notes]({% link docs/releases/v0.15.0.md %})
+- **Release history:** [v0.16.0 release notes]({% link docs/releases/v0.16.0.md %})
 
 The complete task-oriented documentation map is available from the [Documentation home]({% link docs/index.md %}).
 
