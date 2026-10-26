@@ -2,7 +2,7 @@ cff-version: 1.2.0
 title: "Trust Infrastructure Schemas"
 message: "Please cite the TIS version used and retain upstream provenance described by this repository."
 type: software
-version: "0.15.0"
+version: "0.16.0"
 authors:
   - family-names: Mukhopadhyay
     given-names: Sankarshan
